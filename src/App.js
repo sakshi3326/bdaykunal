@@ -16,7 +16,7 @@ function App() {
   // Initialize sound when component mounts
   useEffect(() => {
     const birthdaySound = new Howl({
-      src: ['/birthday-song.mp3'], // Make sure the file is in public folder
+      src: [`${process.env.PUBLIC_URL}/birthday-song.mp3`],
       loop: true,
       volume: 0.5,
       onloaderror: () => console.error('Error loading sound'),
