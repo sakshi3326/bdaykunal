@@ -1,0 +1,138 @@
+/* Main container */
+.party-people-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 4;
+}
+
+/* People container */
+.party-people {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  height: 200px;
+  z-index: 5;
+}
+
+/* Balloons container */
+.balloons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  margin-top: 40px;
+}
+
+/* Person styles */
+.person {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  bottom: 0;
+}
+
+.person-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  background-color: #ffdbac;
+  border-radius: 50%;
+}
+
+.person-body {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  background-color: #6b8cff;
+  border-radius: 5px;
+}
+
+.person-arm {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background-color: #6b8cff;
+  top: 30px;
+  animation: clap 0.5s infinite alternate;
+}
+
+.person-arm.left {
+  left: 5px;
+  transform-origin: top right;
+}
+
+.person-arm.right {
+  right: 5px;
+  transform-origin: top left;
+}
+
+.person0 { left: 10%; }
+.person1 { left: 25%; }
+.person2 { left: 75%; }
+.person3 { left: 90%; }
+.person4 { left: 50%; transform: translateX(-50%); }
+
+@keyframes clap {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(-30deg); }
+}
+
+/* Balloon styles */
+.balloon {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 4;
+  transform-origin: center center;
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  top: 15%;
+  left: 15%;
+}
+
+.balloon-string {
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background-color: #ccc;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balloon-tie {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: calc(100% + 60px);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(0) rotate(-2deg); }
+  50% { transform: translateX(5px) rotate(2deg); }
+}

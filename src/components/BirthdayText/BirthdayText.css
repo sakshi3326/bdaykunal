@@ -1,0 +1,41 @@
+.birthday-text-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.birthday-letter {
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Add bounce animation for hover effect */
+.birthday-letter:hover {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .birthday-letter {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-letter {
+    font-size: 1.5rem;
+  }
+}
