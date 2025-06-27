@@ -15,27 +15,48 @@
   display: inline-block;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-transform: uppercase;
+  color: #ff6b6b; /* Single color for all letters */
 }
 
-/* Add bounce animation for hover effect */
-.birthday-letter:hover {
-  animation: bounce 0.5s ease;
+/* Desktop styles with effects */
+@media (min-width: 769px) {
+  .birthday-letter {
+    color: #ff6b6b;
+    text-shadow: 3px 3px 0 #fff, 5px 5px 0 #ff6b6b;
+  }
+  
+  .birthday-letter:nth-child(even) {
+    color: #ff8e8e;
+    text-shadow: 3px 3px 0 #fff, 5px 5px 0 #ff8e8e;
+  }
+  
+  .birthday-letter:hover {
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-
-/* Responsive adjustments */
+/* Mobile styles - simplified */
 @media (max-width: 768px) {
   .birthday-letter {
     font-size: 2rem;
+    text-shadow: none; /* Remove shadow for better clarity */
+    color: #ff6b6b; /* Single solid color */
+  }
+  .birthday-text-container{
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .birthday-letter {
     font-size: 1.5rem;
+  }
+  .birthday-text-container{
+    margin-top: 20px;
   }
 }

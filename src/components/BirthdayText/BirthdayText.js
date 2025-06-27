@@ -44,10 +44,6 @@ const BirthdayText = () => {
           key={index}
           variants={child}
           className="birthday-letter"
-          style={{
-            color: index % 2 === 0 ? '#ff6b6b' : '#ff8e8e',
-            textShadow: `3px 3px 0 #fff, 5px 5px 0 ${index % 2 === 0 ? '#ff6b6b' : '#ff8e8e'}`
-          }}
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
