@@ -1,55 +1,41 @@
 .birthday-text-container {
   position: absolute;
   top: 10%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows text to wrap on small screens */
   z-index: 10;
-  padding: 0 10px; /* Prevents edge crowding */
+  white-space: nowrap;
 }
 
 .birthday-letter {
   font-size: 3rem;
   font-weight: bold;
+  display: inline-block;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   text-transform: uppercase;
-  color: #ff6b6b; /* Single solid color */
-  text-shadow: 
-    2px 2px 0 #fff, 
-    -2px -2px 0 #fff,
-    2px -2px 0 #fff,
-    -2px 2px 0 #fff; /* White outline for readability */
-  margin: 0 2px; /* Small gap between letters */
-  transition: transform 0.3s ease;
 }
 
-/* Simplified hover effect */
+/* Add bounce animation for hover effect */
 .birthday-letter:hover {
-  transform: translateY(-5px);
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .birthday-letter {
     font-size: 2rem;
-    text-shadow: 
-      1px 1px 0 #fff,
-      -1px -1px 0 #fff; /* Thinner outline */
   }
 }
 
 @media (max-width: 480px) {
-  .birthday-text-container {
-    top: 5%; /* Lower position for mobile */
-  }
-  
   .birthday-letter {
-    font-size: 1.4;
-    margin: 0 1px;
-    padding-top: 20px;
-    text-shadow: none; /* Remove shadow if still unclear */
-    color: #ffffff; /* Fallback solid color */
+    font-size: 1.5rem;
   }
 }

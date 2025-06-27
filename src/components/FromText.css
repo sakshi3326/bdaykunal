@@ -21,43 +21,9 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   animation: gentle-pulse 3s ease-in-out infinite;
-  white-space: nowrap; /* Prevent text wrapping */
-  max-width: 90%; /* Prevent overflow */
-  box-sizing: border-box;
-}
-
-/* Tablet Size */
-@media (max-width: 768px) {
-  .from-text {
-    font-size: 1.8rem;
-    padding: 6px 20px;
-    border-radius: 25px;
-  }
-}
-
-/* Mobile Size */
-@media (max-width: 480px) {
-  .from-text {
-    font-size: 1.4rem;
-    padding: 5px 15px;
-    border-radius: 20px;
-    text-shadow: 
-      1px 1px 0 #fff; /* Simplify shadow */
-    letter-spacing: 0.5px;
-    bottom: 8%; /* Adjust position */
-    
-    /* Scale down the pulse animation */
-    animation: gentle-pulse-mobile 3s ease-in-out infinite;
-  }
 }
 
 @keyframes gentle-pulse {
   0%, 100% { transform: translateX(-50%) scale(1); }
   50% { transform: translateX(-50%) scale(1.05); }
-}
-
-/* Smaller pulse for mobile */
-@keyframes gentle-pulse-mobile {
-  0%, 100% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.03); }
 }
