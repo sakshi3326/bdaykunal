@@ -46,17 +46,21 @@
     font-size: 2rem;
     text-shadow: none; /* Remove shadow for better clarity */
     color: #ff6b6b; /* Single solid color */
+    font-family: Arial ;
   }
   .birthday-text-container{
     margin-top: 20px;
+    font-family: Arial;
   }
 }
 
 @media (max-width: 480px) {
   .birthday-letter {
     font-size: 1.5rem;
+    font-family: Arial ;
   }
   .birthday-text-container{
     margin-top: 20px;
+    font-family: Arial ;
   }
 }
