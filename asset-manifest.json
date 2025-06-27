@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bdaykunal/static/css/main.46eb4a6e.css",
+    "main.js": "/bdaykunal/static/js/main.fdcc70a2.js",
+    "static/js/453.af071cdb.chunk.js": "/bdaykunal/static/js/453.af071cdb.chunk.js",
+    "index.html": "/bdaykunal/index.html",
+    "main.46eb4a6e.css.map": "/bdaykunal/static/css/main.46eb4a6e.css.map",
+    "main.fdcc70a2.js.map": "/bdaykunal/static/js/main.fdcc70a2.js.map",
+    "453.af071cdb.chunk.js.map": "/bdaykunal/static/js/453.af071cdb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46eb4a6e.css",
+    "static/js/main.fdcc70a2.js"
+  ]
+}
